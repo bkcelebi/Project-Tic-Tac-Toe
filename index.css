@@ -1,0 +1,199 @@
+:root {
+  --secondary-color: #1f2937;
+  --cell-size: 6rem;
+  --marker-size: calc(var(--cell-size) * 0.9);
+}
+
+/* ############ CSS RESET STARTS ############# */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  /* height: 100%; */
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+/* ############ CSS RESET ENDS ############# */
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 5fr 0.5fr;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-items: center;
+}
+
+.header {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.main {
+  display: grid;
+  justify-items: center;
+  gap: 3rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border: 2px solid var(--secondary-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--marker-size);
+
+  text-transform: lowercase;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+  border-top: none;
+}
+
+.cell:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.cell:nth-child(3n + 3) {
+  border-right: none;
+}
+
+.cell:last-child,
+.cell:nth-child(8),
+.cell:nth-child(7) {
+  border-bottom: none;
+}
+
+.controlPanel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  justify-items: center;
+}
+
+.marker {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.x,
+.y,
+.restart {
+  width: 3rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+}
+
+.x:hover,
+.y:hover,
+.restart:hover {
+  opacity: 0.5;
+}
+
+.restart {
+  width: 5rem;
+}
+
+button {
+  cursor: pointer;
+  background: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.copyright {
+  justify-self: end;
+}
+
+.footer a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  text-decoration: none;
+  color: black;
+}
