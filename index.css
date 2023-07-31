@@ -97,12 +97,13 @@ body {
 .main {
   display: grid;
   justify-items: center;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .board {
   display: grid;
   grid-template-columns: repeat(3, auto);
+  margin-bottom: 2rem;
 }
 
 .cell {
@@ -116,6 +117,7 @@ body {
   font-size: var(--marker-size);
 
   text-transform: lowercase;
+  cursor: pointer;
 }
 
 .cell:first-child,
@@ -138,36 +140,44 @@ body {
   border-bottom: none;
 }
 
+.instructions {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 .controlPanel {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  justify-items: center;
+  gap: 0.5rem;
 }
 
-.marker {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.x,
-.y,
+.markerX,
+.markerO,
 .restart {
-  width: 3rem;
   border-radius: 0.5rem;
   padding: 0.5rem;
   border: none;
 }
 
-.x:hover,
-.y:hover,
+.invisible {
+  display: none;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+}
+
+.markerX:hover,
+.markerO:hover,
 .restart:hover {
   opacity: 0.5;
 }
 
-.restart {
-  width: 5rem;
+.display {
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--secondary-color);
 }
 
 button {
@@ -175,6 +185,10 @@ button {
   background: var(--secondary-color);
   color: white;
   font-weight: bold;
+}
+
+.restart {
+  background: #595959;
 }
 
 .footer {

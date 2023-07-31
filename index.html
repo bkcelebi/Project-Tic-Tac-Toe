@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project: Tic Tac Toe</title>
     <link rel="stylesheet" href="index.css" />
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <script
       src="https://kit.fontawesome.com/5c9a0150f6.js"
       crossorigin="anonymous"
@@ -16,14 +16,15 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <div class="container">
       <div class="header">Tic Tac Toe</div>
       <div class="main">
         <div class="board">
-          <div class="cell">x</div>
-          <div class="cell">o</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
           <div class="cell"></div>
           <div class="cell"></div>
           <div class="cell"></div>
@@ -32,13 +33,13 @@
           <div class="cell"></div>
           <div class="cell"></div>
         </div>
+        <div class="instructions">Choose your marker to start</div>
         <div class="controlPanel">
-          <div class="marker">
-            <button class="x">X</button>
-            <button class="y">Y</button>
-          </div>
+          <button class="markerX">X</button>
+          <button class="markerO">O</button>
           <button class="restart">Restart</button>
         </div>
+        <div class="display"></div>
       </div>
       <div class="footer">
         <p class="copyright">
