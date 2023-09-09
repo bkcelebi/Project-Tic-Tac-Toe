@@ -2,7 +2,7 @@
 
 ## Overview
 
-Project Tic Tac Toe has been set as part of The Odin project. Create a game of tic tac toe whilst ensuring to use as little global code as possible, by tucking everthing away inside of a module or factory. Skills learnt from the prevoiuse lesson Factory Functions & The Module Pattern.
+Project Tic Tac Toe has been set as part of The Odin project. Create a game of tic tac toe whilst ensuring to use as little global code as possible, by tucking everything away inside of a module or factory. Skills learnt from the previous lesson Factory Functions & The Module Pattern.
 
 ## Objective
 
